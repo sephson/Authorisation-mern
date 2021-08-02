@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoute"));
+app.use("/api/private", require("./routes/privateRoute"));
 app.use(errorHandler); //error middleware should be the last piece of middleware
 const PORT = process.env.PORT || 5000;
 
